@@ -1,17 +1,4 @@
-<?php
-include("config/connexion.php");//connexxion
 
-if(isset($_POST["partenariat"])){// si existe 
-	extract($_POST);// extrait les donnes en variables 
-	$insert_partenariat='INSERT INTO partaneriat(id_entreprise,id_eleve,id_administration,date_recherche,date_envoie,date_retour,date_de_debut_de_satge,date_de_fin_de_satge,) VALUE(?,?,?,?,?,?,?,?)';
-	
-	$insert_partenariat=$pdo->prepare($insert_partenariat);
-
-	$insert_partenariat->execute([$id_entreprise,$id_eleve,$id_administration,$date_recherche,$date_envoie,$date_retour,$date_de_debut_de_stage,$date_de_fin_de_stage]);
-
-	
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
